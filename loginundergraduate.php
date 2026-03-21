@@ -1,5 +1,11 @@
 <?php
-    include_once 'header.php';
+session_start();
+include_once 'header.php';
+
+// Generate CSRF token
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>
     <div class="logo">
     <img src="logo.jpg" width="100" height="100">
@@ -7,6 +13,7 @@
     <div class="form">
       <h1><center>AIS Learning</center> </h1>
     <form action="includes/loginundergraduate.inc.php" method="post">
+      <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
     <div class="container">
     <label for="uname"><b>Username or Email</b></label>
     <input type="text" placeholder="Enter Username or email" name="uname">
