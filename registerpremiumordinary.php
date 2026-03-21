@@ -4,39 +4,62 @@ include 'configpremium.php';
 
 if(isset($_POST['submit'])){
 
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
-   $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
-   $image = $_FILES['image']['name'];
+   $name  = htmlspecialchars(trim($_POST['name']));
+   $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+
+   if(!$email){
+      die("Invalid email format");
+   }
+
+   $pass  = password_hash($_POST['password'], PASSWORD_DEFAULT);
+   $cpass = password_hash($_POST['cpassword'], PASSWORD_DEFAULT);
+
+   
+   $image = basename($_FILES['image']['name']);
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
    $image_folder = 'uploaded_img/'.$image;
 
-   $select = mysqli_query($conn, "SELECT * FROM `user_form_ordinary` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+   $allowed_types = ['image/jpeg','image/png','image/jpg'];
 
-   if(mysqli_num_rows($select) > 0){
+   if(!in_array($_FILES['image']['type'], $allowed_types)){
+      $message[] = 'Invalid image type!';
+   }
+
+  
+   $stmt = $conn->prepare("SELECT id FROM user_form_ordinary WHERE email = ?");
+   $stmt->bind_param("s", $email);
+   $stmt->execute();
+   $result = $stmt->get_result();
+
+   if($result->num_rows > 0){
       $message[] = 'user already exist'; 
    }else{
-      if($pass != $cpass){
+
+      if($_POST['password'] != $_POST['cpassword']){
          $message[] = 'confirm password not matched!';
       }elseif($image_size > 2000000){
          $message[] = 'image size is too large!';
       }else{
-         $insert = mysqli_query($conn, "INSERT INTO `user_form_ordinary`(name, email, password, image) VALUES('$name', '$email', '$pass', '$image')") or die('query failed');
 
-         if($insert){
+       
+         $stmt = $conn->prepare("INSERT INTO user_form_ordinary (name, email, password, image) VALUES (?, ?, ?, ?)");
+         $stmt->bind_param("ssss", $name, $email, $pass, $image);
+
+         if($stmt->execute()){
             move_uploaded_file($image_tmp_name, $image_folder);
             $message[] = 'registered successfully!';
-            header('location:loginpremiumordinary.php');
+            header('location:loginpremium.php');
+            exit();
          }else{
-            $message[] = 'registeration failed!';
+            $message[] = 'registration failed!';
          }
       }
    }
 
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

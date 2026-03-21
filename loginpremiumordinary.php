@@ -1,4 +1,5 @@
 
+
 <?php
 
 include 'configpremium.php';
@@ -6,17 +7,36 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
+  
+   $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+   $password = $_POST['password'];
 
-   $select = mysqli_query($conn, "SELECT * FROM `user_form_ordinary` WHERE email = '$email' AND password = '$pass'") or die('query failed');
-
-   if(mysqli_num_rows($select) > 0){
-      $row = mysqli_fetch_assoc($select);
-      $_SESSION['user_id'] = $row['id'];
-      header('location:homepremiumordinary.php');
+   if(!$email){
+      $message[] = 'Invalid email format!';
    }else{
-      $message[] = 'incorrect email or password!';
+
+      
+      $stmt = $conn->prepare("SELECT * FROM user_form_ordinary WHERE email = ?");
+      $stmt->bind_param("s", $email);
+      $stmt->execute();
+      $result = $stmt->get_result();
+
+      if($result->num_rows > 0){
+
+         $row = $result->fetch_assoc();
+
+         if(password_verify($password, $row['password'])){
+            $_SESSION['user_id'] = $row['id'];
+            header('location:homepremium.php');
+            exit();
+         }else{
+            $message[] = 'incorrect email or password!';
+         }
+
+      }else{
+         $message[] = 'incorrect email or password!';
+      }
+
    }
 
 }
