@@ -1,12 +1,15 @@
 <?php
-  $serverName = "localhost";
-  $dbUsername = "Learners";
-  $dbpassword = "Hn2ern(fklrtwS06";
-  $dbName = "Learners_Login";
+require_once __DIR__ . '/../.env.php';
 
-  $conn = mysqli_connect($serverName,$dbUsername,$dbpassword,$dbName);
+$serverName = DB_HOST;
+$dbUsername = DB_USER;
+$dbpassword = DB_PASS;
+$dbName     = DB_NAME;
 
-  if(!$conn)
-  {
-    die("Connection failed :".mysqli_connect_error());
-  }
+$conn = mysqli_connect($serverName, $dbUsername, $dbpassword, $dbName);
+
+if(!$conn)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>

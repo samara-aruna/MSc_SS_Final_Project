@@ -1,6 +1,7 @@
 <?php
 
- $apiKey = "rzp_test_nchCwzf6fwMAUI";
+require_once __DIR__ . '/.env.php';
+$apiKey = RAZORPAY_KEY;
 
 ?>
 
