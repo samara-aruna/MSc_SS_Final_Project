@@ -12,12 +12,12 @@ if(isset($_POST['update_profile'])){
    mysqli_query($conn, "UPDATE `user_form` SET name = '$update_name', email = '$update_email' WHERE id = '$user_id'") or die('query failed');
 
    $old_pass = $_POST['old_pass'];
-   $update_pass = mysqli_real_escape_string($conn, md5($_POST['update_pass']));
-   $new_pass = mysqli_real_escape_string($conn, md5($_POST['new_pass']));
-   $confirm_pass = mysqli_real_escape_string($conn, md5($_POST['confirm_pass']));
+   $update_pass = $_POST['update_pass'];
+   $new_pass = password_hash($_POST['new_pass'], PASSWORD_DEFAULT);
+   $confirm_pass = password_hash($_POST['confirm_pass'], PASSWORD_DEFAULT);
 
    if(!empty($update_pass) || !empty($new_pass) || !empty($confirm_pass)){
-      if($update_pass != $old_pass){
+      if(!password_verify($update_pass, $old_pass)){
          $message[] = 'old password not matched!';
       }elseif($new_pass != $confirm_pass){
          $message[] = 'confirm password not matched!';
