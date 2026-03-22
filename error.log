@@ -1,0 +1,53 @@
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 24
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 24
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 25
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 25
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 26
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 26
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 31
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 31
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 26
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 26
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 27
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 27
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 28
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 28
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 33
+[22-Mar-2026 15:01:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 33
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 25
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 25
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremium.php on line 32
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremium.php on line 32
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 28
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 28
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 29
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 29
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 34
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumordinary.php on line 34
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 27
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 28
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 28
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 33
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumadvance.php on line 33
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 24
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 24
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 25
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 25
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 26
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined array key "image" in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 31
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 31
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 36
+[22-Mar-2026 15:11:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\myproject\registerpremiumuniversity.php:36
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\myproject\registerpremiumuniversity.php on line 36

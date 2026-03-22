@@ -1,6 +1,12 @@
 <?php
 
-include 'configpremium.php';
+//Disable error display (production)
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
+
+// Optional: log errors to file
+ini_set('log_errors', 1);
+ini_set('error_log', 'error.log');
 
 if(isset($_POST['submit'])){
 
@@ -8,7 +14,7 @@ if(isset($_POST['submit'])){
    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 
    if(!$email){
-      die("Invalid email format");
+      $message[] = "Something went wrong. Please try again.";
    }
 
    $pass  = password_hash($_POST['password'], PASSWORD_DEFAULT);
