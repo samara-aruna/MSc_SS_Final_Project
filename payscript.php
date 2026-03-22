@@ -21,9 +21,9 @@ $apiKey = RAZORPAY_KEY;
     data-name="Acme Corp"
     data-description="A Wild Sheep Chase is the third novel by Japanese author Haruki Murakami"
     data-image=""
-    data-prefill.name="<?php echo $_POST['name'];?>"
-    data-prefill.email="<?php echo $_POST['email'];?>"
-    data-prefill.contact="<?php echo $_POST['mobile'];?>"
+    data-prefill.name="<?php echo htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');?>"
+    data-prefill.email="<?php echo htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');?>"
+    data-prefill.contact="<?php echo htmlspecialchars($_POST['mobile'], ENT_QUOTES, 'UTF-8');?>"
     data-theme.color="#F37254"
 ></script>
 <input type="hidden" custom="Hidden Element" name="hidden">
