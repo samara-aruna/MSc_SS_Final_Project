@@ -16,6 +16,11 @@
     <input type="password" placeholder="Enter Password" name="pwd">
         
     <button type="submit" name="submit">Login</button>
+    <!-- Google Login Button -->
+     <a href="google-login.php" style="display:block; text-align:center; margin-top:10px; padding:10px; background-color:#4285F4; color:white; text-decoration:none; border-radius:5px; font-size:15px;">
+    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width:20px; vertical-align:middle; margin-right:8px;">
+    Login with Google
+</a>
 
     <?php
        if(isset($_GET["error"]))
