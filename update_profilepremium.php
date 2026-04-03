@@ -12,6 +12,10 @@ if(isset($_POST['update_profile'])){
    mysqli_query($conn, "UPDATE `user_form` SET name = '$update_name', email = '$update_email' WHERE id = '$user_id'") or die('query failed');
 
    $old_pass = $_POST['old_pass'];
+// Security Fix: Replaced MD5 hashing with password_hash() using bcrypt (PASSWORD_DEFAULT)
+// MD5 is cryptographically broken and can be reversed using rainbow tables
+// password_hash() uses bcrypt which is a secure one-way hashing algorithm (OWASP A02:2021)
+
    $update_pass = $_POST['update_pass'];
    $new_pass = password_hash($_POST['new_pass'], PASSWORD_DEFAULT);
    $confirm_pass = password_hash($_POST['confirm_pass'], PASSWORD_DEFAULT);
