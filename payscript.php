@@ -1,4 +1,9 @@
 <?php
+// Security Fix: Sanitized user input to prevent Cross-Site Scripting (XSS)
+// Previously $_POST data was directly echoed into HTML without sanitization
+// Applied htmlspecialchars() with ENT_QUOTES and UTF-8 encoding to all user input
+// Prevents malicious JavaScript injection through payment form fields
+// Addresses OWASP A03:2021 - Injection (Cross-Site Scripting)
 
 require_once __DIR__ . '/.env.php';
 $apiKey = RAZORPAY_KEY;
