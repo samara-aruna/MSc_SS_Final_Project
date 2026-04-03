@@ -1,4 +1,9 @@
 <?php
+// Security Fix: Removed hardcoded database credentials from this file
+// Credentials are now stored securely in .env.php configuration file
+// .env.php is excluded from version control via .gitignore
+// Previously contained hardcoded password: $dbpassword = "Hn2ern(fklrtwS06"
+// Fix addresses OWASP A05:2021 - Security Misconfiguration
 require_once __DIR__ . '/../.env.php';
 
 $serverName = DB_HOST;
